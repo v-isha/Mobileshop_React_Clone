@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import PreNavbar from './components/PreNavbar/PreNavbar'
+import Navbar from './components/Navbar/Navbar'
+import '../src/App.css'
+import {BrowserRouter} from 'react-router-dom'
+import Slider from './components/Slider/Slider'
+import data from './data/data.json'
+import Offers from './components/Offers/Offers'
+import Heading from './components/Heading/Heading'
+import StarProduct from './components/StarProduct/StarProduct'
+import HotMenu from './components/HotMenu/HotMenu'
+import ProductReviews from './components/ProductReviews/ProductReviews'
+import Footer from './components/Footer/Footer'
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <BrowserRouter>
+        
+              <PreNavbar/>
+              <Navbar/> 
+              <Slider/>
+              <Offers offer={data.offer}/>
+              <Heading text="STAR PRODUCTS"/>
+              <StarProduct starproduct={data.starProduct}/>
+              <Heading text="HOT ACCESSORIES"/>
+              <HotMenu/>
+              <Heading text="PRODUCT PREVIEWS"/>
+              <ProductReviews  productReviews={data.productReviews}/>
+              <Footer footer={data.footer}/>
+
+      </BrowserRouter>
+               
+
+    
+  )
 }
 
-export default App;
+export default App

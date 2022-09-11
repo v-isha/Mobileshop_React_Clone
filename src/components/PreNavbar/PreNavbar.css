@@ -1,0 +1,47 @@
+.preNav{
+    background-color: rgb(29, 28, 28);
+    display:grid;
+    grid-template-columns: 8fr 2fr;
+    color: white;
+   
+}
+
+#prelinks{
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+#preup{
+    display: flex;
+    align-items:center;
+    /* justify-content: space-around; */
+    padding: 0px 40px;
+    
+}
+
+
+ .preNav > div >span{
+    color: rgba(180, 180, 180, 0.644);
+    font-size: 10px;
+    font-weight: 100;
+}
+
+
+
+
+
+
+.preNav > div > a{
+
+    color: rgb(180, 180, 180);
+    font-size: 11px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.preNav > div > a:hover{
+    color: white;
+}
